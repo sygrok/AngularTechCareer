@@ -4,3 +4,6 @@ powerpoint ile yap
 
 ///
 -onepage cv
+
+git clone (project-url) /clone project
+git pull /to get latest
