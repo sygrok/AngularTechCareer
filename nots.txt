@@ -1,9 +1,14 @@
--framework & libraries 
-farklar nedir
+-framework & libraries arasındaki farklar nelerdir.
 powerpoint ile yap
-
+-Unicode ile Ascii character arasındaki farklar
+-Sementic ve Non-smantic arasındaki farklar.
 ///
 -onepage cv
 
 git clone (project-url) /clone project
 git pull /to get latest
+
+alphastellar a.ş
+
+input taki name backend için önemli
+labeldaki for inputtaki id ye denk gelmeli
