@@ -23,7 +23,7 @@ html {
 
 body {
   background-color: var(--template-color);
-  color: var(--template-color);
+  color: white;
   position: relative;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -42,12 +42,67 @@ label {
 }
 
 /* ================================================================= */
+
+.register_container {
+  width: 100%;
+  /* height: 95vh; */
+  display: flex;
+  justify-content: center !important;
+  place-items: center !important;
+  text-align: center !important;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.register_logo {
+  background: url("https://play-lh.googleusercontent.com/MPDzYIvnXkFgILeyVYa1ZrBhWrQI6voJQ83R3TGhUvU4jjcV3ClQVlhuWDucmSkSwqc")
+    no-repeat center/cover;
+  width: 200px;
+  height: 200px;
+  box-shadow: 1px 5px 10px 5px rgba(250, 250, 250, 0.75);
+  margin-bottom: 15px;
+  border-radius: 50rem;
+}
+
+.register_title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  letter-spacing: 0.3rem;
+}
+
+.form_container {
+  border: 3px solid white;
+  border-radius: 50px;
+  padding: 45px;
+}
+
+input,
+button {
+  display: block;
+  padding: 0 !important;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+input {
+  height: 3rem;
+  margin-bottom: 5px;
+  border-radius: 3.2rem;
+}
+
+.register_form {
+  margin-bottom: 35px;
+  position: relative;
+  width: 40rem;
+  padding: 3rem;
+}
+
 #form_id {
   background-color: var(--template-color);
   opacity: 0.8;
   padding: 1rem 0;
-  width: 80%;
-  margin: auto;
 }
 
 /* TEXT */
@@ -109,9 +164,9 @@ input[type="email"]:hover {
 }
 
 input[type="checkbox"] {
-  margin-left: 10px;
+  width: 25px;
+  margin: auto;
 }
-
 .validation_input {
   color: red;
   display: none;
