@@ -98,22 +98,35 @@
 //// MATH ÖDEVİ
 // Math Ödev
 // Kullanıcıda tarafından aldığımız 2 tane sayının (prompt)
+// let number1 = prompt("Sayı1");
+// let number2 = prompt("Sayı2");
 // s1-) Bu sayılardan en küçüğü nedir ? (min)
-// s2-) Bu sayılardan en büyüğü nedir ? (max)
-// s3-) Bu sayılardan en büyüğü karekökü nedir ? (sqrt(max))
-// s4-) Bu sayılardan en büyüğü karekökünün üste yuvarlıyalım nedir ? (ceil(sqrt(max)))
-// s5-) Bu sayılardan en küçüğü mutlak değeri nedir ? (abs(min))
-// s6-) Bu sayılardan en küçüğü alt taban en büyüğü üst taban şeklinde üstünü alalım(pow(min,max))
+// console.log(Math.min(number1, number2));
+// // s2-) Bu sayılardan en büyüğü nedir ? (max)
+// console.log(Math.max(number1, number2));
+// // s3-) Bu sayılardan en büyüğü karekökü nedir ? (sqrt(max))
+// console.log(Math.sqrt(Math.max(number1, number2)));
+// // s4-) Bu sayılardan en büyüğü karekökünün üste yuvarlıyalım nedir ? (ceil(sqrt(max)))
+// console.log(Math.ceil(Math.sqrt(Math.max(number1, number2))));
+// // s5-) Bu sayılardan en küçüğü mutlak değeri nedir ? (abs(min))
+// console.log(Math.abs(Math.min(number1, number2)));
+// // s6-) Bu sayılardan en küçüğü alt taban en büyüğü üst taban şeklinde üstünü alalım(pow(min,max))
+// console.log(Math.pow(Math.min(number1, number2), Math.max(number1, number2)));
 
 // Örnek: Aşağıdaki örnekleri math ile çözelim ?
 // -5.9 sayıyının aşağıdaki işlemleri yaptıralım ?
 // 1-mutlak değeri alsın 5.9 (Math.abs)
-// 2-yukarı yuvarlama yapsın  6.0 (Math.ceil)
-// 3-karesini alsın 36.00 (Math.pow(sayı,2))
-// 4-çıkan sayının karekökü alsın (Math.sqrt(sayı))
-// 6-)çıkan sonucu 5 bölsün 6/5=1
-// 7-) iki sayı arasından karşılaştırma yapsın en küçüğünü alsın ve 1 ve 5
-// 8-) küçük sayı eğer tekse 3 eklesin çiftse 5 eklesin
+// console.log(Math.abs(-5.9));
+// // 2-yukarı yuvarlama yapsın  6.0 (Math.ceil)
+// console.log(Math.ceil(5.9));
+// // 3-karesini alsın 36.00 (Math.pow(sayı,2))
+// console.log(Math.pow(6, 2));
+// // 4-çıkan sayının karekökü alsın (Math.sqrt(sayı))
+// console.log(Math.sqrt(36));
+// // 6-)çıkan sonucu 5 bölsün 6/5=1
+// console.log(6 / 5);
+// // 7-) iki sayı arasından karşılaştırma yapsın en küçüğünü alsın ve 1 ve 5 ?
+// // 8-) küçük sayı eğer tekse 3 eklesin çiftse 5 eklesin?
 
 /////////////////////////////////////////////////
 // Sayısal İşlemler
@@ -186,7 +199,6 @@
 // console.log(vocabulary.endsWith("js"));
 
 // ÖDEV // kullanıcı tarafından girilen bir kelimenin (prompt)
-// let userData= prompt("Lütfen bir şeyler yazınız")  ;
 // let userData = prompt("Lütfen bir kelime giriniz");
 // console.log(userData);
 // // S-1) Kaç karakterlidir ? (length)
@@ -197,11 +209,10 @@
 // console.log(userData.toLowerCase());
 // // S-4) bütün kelimeyi büyük harfle göstermek ? (toUpperCase())
 // console.log(userData.toUpperCase());
-// // S-5) Kullanıcıdan alınan ilk kelimeyle , "javascript" kelimeyle değiştirin. (replace, substring, indexOf)
+// // S-5) Kullanıcıdan alınan ilk kelimeyle , "javascript" kelimeyle değiştirin. (replace, substring, ş)
 // // console.log(userData.replace("xxxxxxx"),"javascript");
-// console.log(
-//   userData.replace(userData.substring(0, userData.indexOf(" ")), "javascript")
-// );
+// console.log(userData.replace(userData.split(" ")[0], "javascript"));
+
 // // console.log(userData.replace(userData.substring(0,userData.indexOf(" ")),"javascript"));
 // // S-6) yazdığınız kelimede "javascript ile mi başlıyor" ? (startsWith())
 // console.log(userData.startsWith("javascript"));
@@ -370,18 +381,18 @@
 
 ///////////////////////////////////////////////////////////////
 // Exception Handling
-// const exception = () => {
-//   try {
-//     alertx("Alert");
-//   } catch (err) {
-//     console.error(err);
-//     // throw
-//     // throw new Error("zorunlu istisna yaptım");
-//   } finally {
-//     console.log("Ekranda göster Mutlaka");
-//   }
-//   console.log("son satır");
-// };
+const exception = () => {
+  try {
+    alertx("Alert");
+  } catch (err) {
+    console.error(err);
+    // throw
+    // throw new Error("zorunlu istisna yaptım");
+  } finally {
+    console.log("Ekranda göster Mutlaka");
+  }
+  console.log("son satır");
+};
 // exception();
 
 // throw new Error("zorunlu is"); //throw new error sonrası yazılan kod çalışmaz
@@ -412,6 +423,7 @@ let setintervalFunction = () => {
     console.log("setInterval");
   }, 1000);
 };
+//  setintervalFunction()
 
 //
 let setTimeoutAndIntervalFunction = () => {
@@ -427,22 +439,65 @@ let setTimeoutAndIntervalFunction = () => {
     console.log(time + "zaman doldu");
   }, 1 * 1000 * time);
 };
-setTimeoutAndIntervalFunction();
-
-// setintervalFunction();
+// setTimeoutAndIntervalFunction();
 
 // call back function
+const callBackFunction = () => {
+  // 1.Function
+  let birinci = (data) => {
+    return data + 5;
+  };
+
+  // 2.Function
+  let ikinci = (xyz) => {
+    //let userData=  parseInt(prompt("Lütfen bir sayı giriniz"));
+    let userData = 25;
+    const result = xyz(userData);
+    console.log(result);
+  };
+  ikinci(birinci);
+};
+// callBackFunction();
+
 // promise
-// asyc-await
+const promiseFunction = () => {
+  const isLogin = true;
+  const isCreated = 201;
+  let pro = new Promise((resolve, reject) => {
+    if (isLogin && isCreated == 201) resolve("olumlu sonuç");
+    else reject("olumsuz sonuç");
+  })
+    .then((result) => {
+      // new Promise eğer sonuç geldiyse then çalışsın
+      console.log("Then", result);
+    })
+    .catch(() => {
+      // new Promise eğer sonuç olumsuzsa catch çalışsın
+      console.error("catch");
+    });
+  console.log(pro);
+};
+// promiseFunction();
+
+///////////////////////////////////////////////////////////////
 // Diziler
+///////////////////////////////////////////////////////////////
+// Callback Function (ES6)
+// Promise(ES7)
+// asyc-await(ES8)
+///////////////////////////////////////////////////////////////
 // Object
+///////////////////////////////////////////////////////////////
 // DOM
+///////////////////////////////////////////////////////////////
 // LocalStorage
+///////////////////////////////////////////////////////////////
 // ES5
 // ES6
 
 ///////////////////////////////////////////////////////////////
 // Zamanımız oldukca one page projesine başla
+// worker ()
 // Typescript
 // Angular
 // nodejs
