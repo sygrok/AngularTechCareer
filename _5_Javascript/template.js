@@ -536,6 +536,14 @@ const student = {
 
 ///////////////////////////////////////////////////////////////
 // LocalStorage
+// localStorage.setItem("name", "Berkay");
+// const item1 = localStorage.getItem("test1");
+// console.log(item1);
+
+// localStorage.removeItem("name");
+
+// localStorage.clear();
+
 ///////////////////////////////////////////////////////////////
 // ES5
 // ES6
