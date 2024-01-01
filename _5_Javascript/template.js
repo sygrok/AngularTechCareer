@@ -480,15 +480,60 @@ const promiseFunction = () => {
 // promiseFunction();
 
 ///////////////////////////////////////////////////////////////
+
 // Diziler
+// let fruits = ["apple", "orange", "watermelon", "cucumber"];
+
+// //push function
+// fruits.push("tomato");
+// fruits.forEach((item) => {
+//   console.log(item);
+// });
+
+// //slice function
+// let slicedFruit = fruits.slice(0, 2);
+
+// slicedFruit.forEach((item, index) => {
+//   console.log(index, item);
+// });
+
+// //concat function
+
+// let concatFruit = fruits.concat(["banana", "mango"]);
+
+// concatFruit.forEach((item, index) => {
+//   console.log(index, item);
+// });
+
 ///////////////////////////////////////////////////////////////
 // Callback Function (ES6)
 // Promise(ES7)
 // asyc-await(ES8)
 ///////////////////////////////////////////////////////////////
 // Object
+const student = {
+  name: "Ahmet",
+  age: 25,
+  job: "Frontend Developer",
+};
+
+// console.log(
+//   `Merhaba ben ${student.name}, ${student.age} yaşındayım ve ${student.job} olarak çalışıyorum.`
+// );
+
 ///////////////////////////////////////////////////////////////
 // DOM
+// select element
+// const myMain = document.getElementById("main");
+
+//create element
+// const pharagraph1 = document.createElement("p");
+// pharagraph1.textContent = "This pharaprah is created with dom";
+
+//adding elemt
+
+// myMain.appendChild(pharagraph1);
+
 ///////////////////////////////////////////////////////////////
 // LocalStorage
 ///////////////////////////////////////////////////////////////
