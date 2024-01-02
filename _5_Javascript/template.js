@@ -220,7 +220,6 @@
 // console.log(userData.endsWith("javascript"));
 // // S-8) ilk harf nedir  ? (charAt())
 // console.log(userData.charAt(0));
-
 // // S-9) girdiğiniz kelimenin sonuna "-ben js öğreniyorum" (concat())
 // console.log(userData.concat("-ben js öğreniyorum"));
 // // S-10) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin? (subString())
@@ -572,8 +571,45 @@ let arrayFunction3 = () => {
     document.writeln(`${value} `);
   });
 };
-arrayFunction3();
+// arrayFunction3();
 
+let arrayFunction4 = () => {
+  let array = arrayFunction2();
+  delete array[0];
+  console.log(array);
+};
+// arrayFunction4();
+
+let arrayFunction5 = () => {
+  let array = arrayFunction2();
+
+  //to string
+  let arrayString = array.toString();
+  console.log(arrayString);
+
+  //join
+  let arrayDaa = array.join("-");
+  console.log(arrayDaa);
+
+  //
+};
+// arrayFunction5();
+
+let arrayFunction6 = () => {
+  let array = arrayFunction2();
+
+  //Slice
+  let sliceArray = array.slice(2);
+  console.log(sliceArray);
+
+  let sliceArray2 = array.slice(0, 2);
+  console.log(sliceArray2);
+
+  //Splice
+  let spliceArray = array.splice(0, 2);
+  console.log(spliceArray);
+};
+arrayFunction6();
 ///////////////////////////////////////////////////////////////
 // Callback Function (ES6)
 // Promise(ES7)
