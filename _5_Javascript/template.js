@@ -695,19 +695,73 @@ const student = {
     name: "Turkish",
     proficiency: "Native",
   },
-  testF: function () {
-    console.log("deneme");
+  testF: function (x) {
+    console.log(x + "deneme");
+    console.log(this.age + " object literal");
   },
 };
+// console.log(
+//   `Merhaba ben ${student.name}, ${student.age} yaşındayım ve ${student.job} olarak çalışıyorum.`
+// );
 
-console.log(
-  `Merhaba ben ${student.name}, ${student.age} yaşındayım ve ${student.job} olarak çalışıyorum.`
-);
+// console.log(student);
+// console.log(student.name);
+// console.log(student.language.proficiency);
+// student.testF(student.language.name);
 
-console.log(student);
-console.log(student.name);
-console.log(student.language.proficiency);
-student.testF();
+let person = {
+  name: "Berkay",
+  surname: "Anduv",
+  isLogin: true,
+  isCreated: 2024,
+  array: [4, 1, 5, 2, 9, 7, 3, 6],
+  language: {
+    name: "Java SE",
+    age: 20,
+  },
+  result: function () {
+    console.log(this.surname + " Function çalıştı");
+    //console.log(person.surname+"Function çalıştı");
+    //return surname+" "+isLogin;
+  },
+};
+// console.log("*********************");
+// console.log(person);
+// console.log("*********************");
+// console.log(person.isLogin);
+// console.log(typeof person.isLogin);
+// console.log("*********************");
+// console.log(person.name);
+// console.log(person["name"]); //nested calling
+// console.log(person.language.name);
+// person.result();
+
+// // object Literal
+// person.number = 44;
+// console.log(person.number);
+
+// // diziyi => String'e (toString() veya join)
+// console.log(person.array);
+// console.log(typeof person.array);
+// console.log(typeof person.language);
+// let arrayToString = person.array.toString();
+// console.log(arrayToString);
+// let arrayToString2 = person.array.join(",");
+// console.log(arrayToString2);
+
+// // String'i => Diziye çevir (split())
+// let stringToArray = arrayToString.split(",");
+// console.log(stringToArray);
+
+//Json
+
+let objectToString = JSON.stringify(person);
+console.log(objectToString);
+console.log(objectToString.substring(0, 10));
+
+const data = JSON.parse(objectToString);
+console.log(data);
+
 ///////////////////////////////////////////////////////////////
 // Callback Function (ES6)
 // Promise(ES7)
