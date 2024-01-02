@@ -604,27 +604,114 @@ let arrayFunction6 = () => {
 
   let sliceArray2 = array.slice(0, 2);
   console.log(sliceArray2);
-
-  //Splice
-  let spliceArray = array.splice(0, 2);
-  console.log(spliceArray);
 };
-arrayFunction6();
+// arrayFunction6();
+
+let arrayFunction7 = () => {
+  let array = arrayFunction2();
+  console.log(array);
+
+  // slice (Original Array'i bozmaz)
+  // splice (Original Array'i bozar)
+  // Diziyi String'e çevirir
+
+  // Splice
+  // array.splice(0,2);
+  // console.log(array);
+
+  // array.splice(2,3);
+  // console.log(array);
+
+  // 0: başlama indexi
+  // 2: çıkarma
+  // array.splice(0,3);
+  // console.log(array);
+
+  // 2: Başlama indexi
+  // 0: Ekleme
+  // 2,3: eklenecek sayılar
+  array.splice(2, 0, 2, 3);
+  console.log(array);
+};
+// arrayFunction7();
+
+//Filter & MAP
+let arrayFunction8 = () => {
+  let array = arrayFunction2();
+  array.sort();
+  console.log(array);
+
+  // array
+  //   .filter((response) => {
+  //     return response >= 5;
+  //   })
+  //   .forEach((value) => {
+  //     console.log(`${value} `);
+  //   });
+
+  //  filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[];
+  //    let mapResult= array.map((response) => {
+  //         return response = response * 2;
+  //     });
+  //     console.log(mapResult);
+
+  //     mapResult.forEach(value => {
+  //         console.log(`${value} `);
+  //     });
+
+  // Her bir değişkendeki sadece çift olan sayıları alın (filter)
+  // sonrasında bu sayılara 5 ekleyin (map)
+  // sonrasında bu sayıları ekranda gösterin (forEach)
+  array
+    .filter((response) => {
+      return response % 2 == 0;
+    })
+    .map((response) => {
+      return (response += 5);
+    })
+    .forEach((value) => {
+      console.log(`${value}`);
+    });
+};
+// arrayFunction8();
+
 ///////////////////////////////////////////////////////////////
-// Callback Function (ES6)
-// Promise(ES7)
-// asyc-await(ES8)
+// LocalStorage
+// localStorage.setItem("name", "Berkay");
+// const item1 = localStorage.getItem("test1");
+// console.log(item1);
+
+// localStorage.removeItem("name");
+
+// localStorage.clear();
+
 ///////////////////////////////////////////////////////////////
 // Object
 const student = {
   name: "Ahmet",
   age: 25,
   job: "Frontend Developer",
+  language: {
+    name: "Turkish",
+    proficiency: "Native",
+  },
+  testF: function () {
+    console.log("deneme");
+  },
 };
 
-// console.log(
-//   `Merhaba ben ${student.name}, ${student.age} yaşındayım ve ${student.job} olarak çalışıyorum.`
-// );
+console.log(
+  `Merhaba ben ${student.name}, ${student.age} yaşındayım ve ${student.job} olarak çalışıyorum.`
+);
+
+console.log(student);
+console.log(student.name);
+console.log(student.language.proficiency);
+student.testF();
+///////////////////////////////////////////////////////////////
+// Callback Function (ES6)
+// Promise(ES7)
+// asyc-await(ES8)
 
 ///////////////////////////////////////////////////////////////
 // DOM
@@ -638,16 +725,6 @@ const student = {
 //adding elemt
 
 // myMain.appendChild(pharagraph1);
-
-///////////////////////////////////////////////////////////////
-// LocalStorage
-// localStorage.setItem("name", "Berkay");
-// const item1 = localStorage.getItem("test1");
-// console.log(item1);
-
-// localStorage.removeItem("name");
-
-// localStorage.clear();
 
 ///////////////////////////////////////////////////////////////
 // ES5
