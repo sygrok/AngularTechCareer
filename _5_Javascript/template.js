@@ -505,6 +505,75 @@ const promiseFunction = () => {
 //   console.log(index, item);
 // });
 
+let arrayFunction = () => {
+  let array = [4, 1, 5, 2, 9, 7, 3, 6];
+  console.log(array);
+  console.log("Eleman sayısı: " + array.length);
+  console.log(array[0]);
+  console.log(array[7]);
+  console.log(array[7 - 1]);
+  array[8] = 44;
+  console.log(array);
+  console.log(array[array.length - 1]);
+};
+//arrayFunction();
+
+let arrayFunction2 = () => {
+  let array = [4, 1, 5, 2, 9, 7, 3, 6];
+  // Ödev: 1-9 arasında  rastgele 8 tane sayı  üreten algoritma
+  return array;
+};
+
+let arrayFunction3 = () => {
+  let array = arrayFunction2();
+
+  // For
+  for (let i = 0; i < array.length; i++) {
+    document.writeln(array[i]);
+  }
+
+  // FOR ...IN
+  document.writeln("<br/>*******************************<br/>");
+  array.push(23);
+  for (let data in array) {
+    document.writeln(data + "=> " + array[data] + "<br/>");
+  }
+
+  // FOR ... OF
+  document.writeln("<br/>*******************************<br/>");
+  array.unshift(50);
+  for (let data of array) {
+    document.writeln(data);
+  }
+
+  // FOREACH
+  document.writeln("<br/>*******************************<br/>");
+  array.pop();
+  array.forEach((value, index, array) => {
+    document.writeln(`${value} `);
+  });
+
+  // FOREACH
+  document.writeln("<br/>*******************************<br/>");
+  array.shift();
+  array.forEach((value, index, array) => {
+    document.writeln(`${value} `);
+  });
+
+  //// SORT
+  document.writeln("<br/>*******************************<br/>");
+  array.sort().forEach((value) => {
+    document.writeln(`${value} `);
+  });
+
+  //// REVERSE
+  document.writeln("<br/>*******************************<br/>");
+  array.reverse().forEach((value) => {
+    document.writeln(`${value} `);
+  });
+};
+arrayFunction3();
+
 ///////////////////////////////////////////////////////////////
 // Callback Function (ES6)
 // Promise(ES7)
