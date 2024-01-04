@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "watch": "npx tailwindcss -i ./src/input.css -o ./style.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon index.js",
+    "nodemon_q": "nodemon -q index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.2"
   }
 }
