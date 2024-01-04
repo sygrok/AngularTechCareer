@@ -204,6 +204,7 @@
 // // S-1) Kaç karakterlidir ? (length)
 // console.log(userData.length);
 // // S-2) boşluklar alınarak Kaç karakterlidir ? (trim)
+// console.log(userData.trim();
 // console.log(userData.trim().length);
 // // S-3) bütün kelimeyi küçük harfle göstermek ? (toLowerCase())
 // console.log(userData.toLowerCase());
